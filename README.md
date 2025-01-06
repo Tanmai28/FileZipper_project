@@ -63,7 +63,7 @@ The compressed file (which contains the byte array) is read.
 The byte array is converted back into a bitstream.
 The bitstream is decoded using the Huffman tree, restoring the original text.
 
-Step 7: Visualization of the Huffman Tree
+Step 7: **Visualization of the Huffman Tree**
 The Huffman tree can be visualized using a graphical representation. This helps in understanding how characters are encoded and how the tree structure optimizes the compression process. The visualization typically displays the characters along with their frequencies, showing the tree structure that was used for encoding.
 
 **How the Project Works in Practice**
