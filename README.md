@@ -36,22 +36,27 @@ The process of Huffman coding typically involves:
 
 **How the Solution Works**
 
-**Step 1**: Frequency Calculation
+**Step 1**: **Frequency Calculation**
+
 The first step in compression is to calculate how often each character appears in the input text. This frequency table helps in constructing the Huffman tree, where characters with higher frequencies will have shorter codes.
 
-**Step 2**: Building the Huffman Tree
+**Step 2**: **Building the Huffman Tree**
+
 The Huffman tree is built using a priority queue. Each node in the queue represents a character and its frequency. The algorithm repeatedly combines the two nodes with the lowest frequencies into a new internal node, which is pushed back into the queue. This process continues until only one node remains, which is the root of the Huffman tree.
 
-**Step 3**: Generating Huffman Codes
+**Step 3**: **Generating Huffman Codes**
+
 Once the Huffman tree is built, we assign binary codes to each character by traversing the tree. Moving to the left child of the tree is represented by a '0', and moving to the right child is represented by a '1'. This traversal generates a unique binary code for each character.
 
-**Step 4**: Compressing the Data
+**Step 4**: **Compressing the Data**
+
 With the Huffman codes available, the input text is encoded by replacing each character with its corresponding binary code. The resulting bitstream represents the compressed form of the original text.
 
-**Step 5**: Writing the Compressed Data
+**Step 5**: **Writing the Compressed Data**
+
 The compressed bitstream is then written to a file, but before doing so, it is converted from a series of bits to a byte array. This ensures that the data can be efficiently stored and transmitted.
 
-**Step 6**: Decompression
+**Step 6**: **Decompression**
 To decompress the file:
 
 The compressed file (which contains the byte array) is read.
